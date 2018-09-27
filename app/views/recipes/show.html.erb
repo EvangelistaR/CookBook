@@ -1,0 +1,12 @@
+<h1 class="text-center"><%= @recipe.title %></h1>
+<h3 class="">Detalhes</h3>
+<p class=""><%=@recipe.recipe_type %></p>
+<p class=""><%=@recipe.cuisine %></p>
+<p class=""><%=@recipe.difficulty %></p>
+<p class=""><%=@recipe.cook_time %> minutos</p>
+<h3 class="">Ingredientes</h3>
+<p class=""><%=@recipe.ingredients %></p>
+<h3 class="">Como Preparar</h3>
+<p class=""><%=@recipe.cook_method %></p>
+
+<p class="btn btn-outline-info"><%= link_to 'Voltar', root_path %></p>
