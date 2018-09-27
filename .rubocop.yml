@@ -22,6 +22,9 @@ AllCops:
     - 'spec/spec_helper.rb'
     - 'spec/rails_helper.rb'
     - 'spec/spec_helper.rb'
+    - '**/Rakefile'
+    - '**/Gemfile'
+    - '**/config.ru'
 Metrics/BlockLength:
   ExcludedMethods: ['describe', 'context', 'feature', 'scenario', 'let']
 Style/FrozenStringLiteralComment:
