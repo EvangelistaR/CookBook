@@ -9,7 +9,16 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
+    if @recipe.save
+      flash[:sucess] = 'Receita cadastrada com sucesso!'
+      redirect_to recipe_path(@recipe.id)
+    else
+      flash[:warning] = 'Você deve informar todos os dados'
+      render 'new'
+    end
   end
+
+  private
 
   def recipe_params
     params.require(:recipe).permit(:title, :recipe_type, :cuisine, :difficulty,

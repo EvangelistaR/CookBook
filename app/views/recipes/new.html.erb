@@ -1,8 +1,36 @@
-<h2 class="">Nova receita</h2>
+<h2 class="text-center">Cadastrar uma receita</h2>
+<%= flash[:warning] %>
 
 <%= form_for @recipe do |f| %>
-    <div class="">
-        <%= f.label :title, 'Titulo' %>
+    <div class="field">
+        <%= f.label :title, 'Título' %>
         <%= f.text_field :title %>
+    </div>
+    <div class="field">
+        <%= f.label :recipe_type, 'Tipo da Receita' %>
+        <%= f.text_field :recipe_type %>
+    </div>
+    <div class="field">
+        <%= f.label :cuisine, 'Cozinha' %>
+        <%= f.text_field :cuisine %>
+    </div>
+    <div class="field">
+        <%= f.label :difficulty, 'Dificuldade' %>
+        <%= f.text_field :difficulty %>
+    </div>
+    <div class="field">
+        <%= f.label :cook_time, 'Tempo de Preparo' %>
+        <%= f.text_field :cook_time %>
+    </div>
+    <div class="field">
+        <%= f.label :ingredients, 'Ingredientes' %>
+        <%= f.text_area :ingredients %>
+    </div>
+    <div class="field">
+        <%= f.label :cook_method, 'Como Preparar' %>
+        <%= f.text_area :cook_method %>
+    </div>
+    <div class="field">
+        <%= f.submit 'Enviar' %>
     </div>
   <% end %>
